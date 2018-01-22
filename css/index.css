@@ -1,3 +1,49 @@
 body{
 	font-family: 'Lato', sans-serif;
+	margin:0;
+	padding:0;
+	width: 1366px;
+    height: 631px;
+} 
+
+.forget_container_main .navbar_header{
+	height: 86px;
+	box-shadow: 0 1px 9px 1px #DFDFDF;
+    margin-bottom: 5px;
+}
+
+.forget_container_main .forget_password_content
+{
+	width: 1364px;
+    height: 551px;
+	text-align: center;
+	background-color: #F7F7F7;
+	color: #626262;
+}
+
+.forget_container_main .forget_password_content .forget_your_password
+{
+	opacity: 0.6;
+	font-size: 35px;
+	line-height: 4.8;
+}
+
+.forget_container_main .forget_password_content .enter_email_add{
+	width: 413px;
+	height: 38px;
+	opacity: 0.8;
+	font-size: 16px;
+}
+
+.forget_container_main .forget_password_content .forget_password_email_section{
+	width: 640px;
+	height: 317px;
+	border-radius: 5px;
+	background-color: #ffffff;
+	border: solid 1px #eaeaea;
+}
+
+.forget_container_main .content_center{
+	margin: 0 auto;
+	width: 50%;
 }

@@ -8,6 +8,16 @@ body{
     background-color: #F7F7F7;
 } 
 
+.navbar-brand {
+    padding: 0px;
+  }
+  
+  .navbar-brand>img {
+    height: 100%;
+    padding: 15px;
+    width: auto;
+  }
+
 /******************************************** Navbar Style **********************************************************/
 
 .forget_container_main .nav_header .fairPrice-icon {
@@ -24,7 +34,7 @@ body{
     display: inline-block;
 }
 
-.forget_container_main .nav_header .right-pipe {
+.forget_container_main .navbar-header .right-pipe {
    border: 0.3px solid #626262;
    margin: 4px 20px 0 20px;
    height: 31px;

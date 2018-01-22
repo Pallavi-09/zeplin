@@ -11,19 +11,38 @@
     <script src="script/bootstrap.min.js"></script>
   </head>
   <body> 
-    <form action="/action_page.php">
-      <div class="forget_container_main">
-        <nav class="navbar password_nav">
-            <div class="nav_header">
-                <div class="pull-left col-xs-6">
-                    <div class="pull-left"><i class="fairPrice-icon"></i></div>
-                    <div class="pull-left right-pipe"></div>
-                    <div class="pull-left"><i class="grab-icon"></i></div>
+    <form action="#">
+      <div class="forget_container_main container-fluid navbar-fixed-top">
+        <nav class="navbar navbar-default">
+            <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            <div class="container-fluid">
+                <div class="navbar-header col-xs-6">
+                  <a class="navbar-brand" href="#">
+                    <img src="images/fairPrice.png" alt="fairPrice.png"/>
+                  </a>
+                  <a class="navbar-brand right-pipe" href="#"></a>
+
+                  </a>
+                  <a class="navbar-brand" href="#"></a>
+                    <img src="images/grab.png" alt="fairPrice.png"/>
+                  </a>
                 </div>
-                <div class="pull-right col-xs-6">
-                  <button type="button" class="pull-right signup_btn active_btn col-xs-2">SIGN UP</button>                  
-                  <button type="button" class="pull-right login_btn col-xs-2">LOGIN</button>
-                </div>
+                <ul class="nav navbar-nav col-xs-2 pull-right">
+                  
+                  <li class="pull-left">
+                    <p class="navbar-btn">
+                        <a href="#" class="btn btn-default">LOGIN</a>
+                    </p>
+                  </li>
+                  <li class="pull-left">
+                      <p class="navbar-btn">
+                          <a href="#" class="btn btn-default active_btn">SIGN UP</a>
+                      </p>
+                      
+                  </li>
+                </ul>
             </div>
         </nav>
         <div class="forget_password_content">

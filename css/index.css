@@ -2,9 +2,81 @@ body{
 	font-family: 'Lato', sans-serif;
 	margin:0;
 	padding:0;
-	width: 1366px;
-    height: 631px;
+	width: 100%;
+    height: 100%;
+    font-size: 18px;
+    background-color: #F7F7F7;
 } 
+
+
+.forget_container_main .nav_header .fairPrice-icon {
+    background: url('../images/fairPrice.png') no-repeat 1px 1px;
+    height: 36px;
+    width: 221px;
+    display: inline-block;
+}
+
+.forget_container_main .nav_header .grab-icon{
+	background: url('../images/grab.png') no-repeat 1px 1px;
+    height: 36px;
+    width: 81px;
+    display: inline-block;
+}
+
+.forget_container_main .nav_header .right-pipe {
+   border: 0.3px solid #626262;
+   margin: 4px 20px 0 20px;
+   height: 31px;
+}
+
+.forget_container_main .password_nav {
+    box-shadow: 0px 2px 3px #E7E7E7 !important;
+    border-bottom: 1px solid #DFDFDF;
+    height: 82px;
+    color: #6A6A6A;
+    background: #fff;
+}
+
+.padding25{
+    padding-top: 18px;
+}
+
+.marginTop10{
+    margin-top:10px;
+}
+
+.width70{
+    width:78px;
+}
+
+.leftText{
+    width: 101px;
+    text-align: right;
+}
+
+.login_btn{
+    width: 114px;
+    height: 37px;
+    color: #1c9c7a;
+    border-radius: 5px;
+    border: 1px solid #1C9C7A;
+    margin-right: 15px;
+    font: bold;
+    background: #fff;
+}
+
+.signup_btn{
+    width: 114px;
+    height: 37px;
+    color: #fff;
+    font: bold;   
+    border-radius: 5px;
+    border: 1px solid #1C9C7A;
+    margin-right: 15px;
+    background: #1c9c7a;
+}
+
+
 
 .forget_container_main .navbar_header{
 	height: 86px;
@@ -14,8 +86,6 @@ body{
 
 .forget_container_main .forget_password_content
 {
-	width: 1364px;
-    height: 551px;
 	text-align: center;
 	background-color: #F7F7F7;
 	color: #626262;

@@ -8,45 +8,46 @@ body{
     background-color: #F7F7F7;
 } 
 
+/* Remove the navbar's default margin-bottom and rounded borders */ 
+
 .navbar-brand {
     padding: 0px;
-  }
-  
-  .navbar-brand>img {
+}
+
+.navbar-brand>img {
     height: 100%;
     padding: 15px;
     width: auto;
-  }
-
-/******************************************** Navbar Style **********************************************************/
-
-.forget_container_main .nav_header .fairPrice-icon {
-    background: url('../images/fairPrice.png') no-repeat 1px 1px;
-    height: 36px;
-    width: 221px;
-    display: inline-block;
 }
-
-.forget_container_main .nav_header .grab-icon{
-	background: url('../images/grab.png') no-repeat 1px 1px;
-    height: 36px;
-    width: 81px;
-    display: inline-block;
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
 }
-
-.forget_container_main .navbar-header .right-pipe {
-   border: 0.3px solid #626262;
-   margin: 4px 20px 0 20px;
-   height: 31px;
-}
-
 .forget_container_main .password_nav {
     box-shadow: 0px 2px 3px #E7E7E7 !important;
     border-bottom: 1px solid #DFDFDF;
-    height: 82px;
     color: #6A6A6A;
     background: #fff;
-    padding-top: 18px;
+    padding: 15px 25px 15px 25px;
+}
+
+.padding10{
+    padding:6px 10px 0px 10px !important;
+}
+
+.forget_container_main .navbar-brand .fairPrice-icon ,
+.forget_container_main .navbar-brand .grab-icon{
+    height: auto;
+    width: 100%;
+    display: inline-block;
+}
+/******************************************** Navbar Style **********************************************************/
+
+
+.forget_container_main .navbar-header .right-pipe {
+   border: 0.3px solid #626262;
+   margin:10px 0px 0 0px;
+   height: 31px;
 }
 
 .login_btn{
@@ -91,32 +92,34 @@ body{
 {
     opacity: 0.6;
     font-size: 35px;
-    line-height: 2.7;
-    margin-top: 20px;
+    margin-top: 11px;
+    margin-bottom: 25px;
 }
 
 .forget_container_main .forget_password_content .enter_email_add{
-	height: 95px;
-	opacity: 0.8;
+    opacity: 0.8;
     font-size: 16px;
     width: 50%;
-    margin: 0 auto;
-    font-weight: 300;    
+    margin: 25px auto;
+    font-weight: 300;
 }
 
 .forget_container_main .forget_password_content .forget_password_email_section{
-	width: 80%;
-	height: 317px;
-	border-radius: 5px;
-	background-color: #ffffff;
+    width: 80%;
+    height: 317px;
+    border-radius: 5px;
+    background-color: #ffffff;
     border: solid 1px #eaeaea;
-    margin: 0 auto;
+    margin: 25px auto;
     padding: 25px 0 25px 0;
+    position: relative;
+    top: 25px;
 }
 
 .forget_container_main .content_center{
-	margin: 0 auto;
-	width: 50%;
+	margin: 25px auto;
+    width: 50%;
+    padding:25px;
 }
 
 .forget_container_main .forget_password_email_section .forms_section{
@@ -164,7 +167,7 @@ body{
 }
 
 .forget_container_main .forget_password_email_section .back_login{
-    width: 25%;
+    width: 27%;
     font-size: 14px;
     color: #626262;
     margin: 0 auto;
@@ -175,14 +178,4 @@ body{
     height: 23px;
     width: 29px;
     display: inline-block;   
-}
-
-@media screen and (max-width: 1209px) and (min-width: 375px) {
-    .adjust_back_icon{
-        width:32% !important;
-    }
-
-
-
-
 }

@@ -14,7 +14,7 @@
       
       <!--Navigation Bar-->
 
-      <div class="forget_container_main container-fluid manage_nav">
+      <div class="container-fluid">
         <div class="forget_container_main password_nav row">
           <div class="col-md-6 col-sm-6 col-xs-7">
             <div class="pull-left" >	
@@ -41,9 +41,23 @@
 
       <div class="container-fluid faq-content-sec">
         <div class="Faqs_details">
-          <h2>FAQs</h2>    
+          <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-6">
+              <div class="h2">
+                FAQs
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6 faq-hide" id="toggle-bar">
+              <div class="h3 text-right">
+                <span class="left_dotted">All</span>
+                <span>
+                    <i class="fa fa-ellipsis-v" id="three_dotted" aria-hidden="true"></i>
+                </span>
+              </div>
+            </div>    
+          </div>
         </div>
-        <hr class="faqLine">
+        <hr class="c faqLine" >
         <div class="row margin_top">
           <div class="col-md-8 col-sm-12 col-xs-12">
             <div class="tab-content">
@@ -158,7 +172,8 @@
             </div>
           </div>
     
-          <div class="col-md-4 col-sm-12 col-xs-0">
+          <div id="faq-left-nav-bar" class="col-md-4 col-sm-12 col-xs-0 display_none">
+            <div id="cross-nav" class="cross_icon display_none"><span>&#10005;</span></div>
             <div class="left-nav-bar">
               <ul>
                 <li class="active"><a data-toggle="tab" href="#all">All</a></li>
@@ -180,5 +195,5 @@
   </body>
   <script src="script/jquery.min.js"></script>
   <script src="script/bootstrap.min.js"></script>
-
+  <script src="script/faqs.js"></script>
 </html>

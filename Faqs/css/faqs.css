@@ -26,7 +26,7 @@ body .container-fluid{
 }
 /******************************************** Navbar Style **********************************************************/
 
-.forget_container_main .password_nav {
+.forget_container_main.password_nav {
     box-shadow: 0 2px 3px #E7E7E7!important;
     border-bottom: 1px solid #DFDFDF;
     color: #6A6A6A;
@@ -132,6 +132,9 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 /******************************************** Content Style **********************************************************/
 
+.c {
+    clear: both;
+}
 .main-wrapper {
     overflow-x: hidden;
 }
@@ -139,7 +142,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     font-size: 35px;
     color: #000000;
     opacity: 0.6;
-    padding: 33px 0px;
+    padding: 25px 0px 4px;
 }
 .margin_top{
     margin-top: 48px;
@@ -160,20 +163,59 @@ and (-webkit-min-device-pixel-ratio: 2) {
 }
 .left-nav-bar li{
     list-style-type: none;
-    border:1px solid #c7c7c7;
+    border:1px solid #EDEDED ;
     background: #fff;
     margin-bottom: 3px;
     padding:10px 28px;
-    opacity: 0.32;
 }
 .left-nav-bar li a{
-    color:#000;
+    color:#707070;
+    text-decoration: none;
 }
 .left-nav-bar .active{
     border-left: 5px solid #29a281;
-    opacity: 1;
+    background-color: #F9F9F9;
+}
+.left-nav-bar .active a{
+    color:#000;
+}
+.left_dotted{
+    margin-right:10px;
+}
+.faq-hide{
+    display:none;
+}
+.col-md-4.col-sm-12.col-xs-0.left-nav-toggle {
+    display: block;
+    position: absolute;
+    top: 93px;
+    right: 0px;
+    width: 363px;
+}
+.cross_icon{
+    padding:15px 17px 15px 0px;
+    border: 1px solid #EDEDED;
+    border-bottom: none;
+    text-align:right;
+}
+.cross_icon span {
+    color: #000;
+    cursor: pointer;
+}
+.left-nav-bar {
+    background: #fff;
 }
 
+@media only screen 
+and (max-device-width: 1000px)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .faq-hide{
+        display:block
+    }
+    .display_none{
+        display:none;
+    }
+}
 
 /******************************************** Footbar Style **********************************************************/
 .footer_main_section{

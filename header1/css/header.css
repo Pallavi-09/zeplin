@@ -89,20 +89,50 @@ body .container-fluid{
     font-size: 18px;
     font-weight: bold;
     color: #040000;
+    margin-right: 5px;
 }
 .down-icon{
     color: #1D9C7A;
     display: inline-block;
     margin-left: 10px;
     position: relative;
-    top: 6px;
+    bottom: 5px;
 }
-.alert_icon{
+.bar {
     position: relative;
-    top: 4px;
+    transform: translateY(25px);
+    background: black;
+    transition: all 0ms 300ms;
+    width: 19px;
+}
+.bar, .bar:after, .bar:before {
+    width: 30px;
+    height: 3px;
+}
+@media only screen and (max-width: 368px)
+{
+    .bell-icon-min{
+        width: 25% !important;
+    }
+    .login-user{
+        width: 75% !important;
+    }
+}
+@media only screen and (max-width: 636px) {
+    .left-icon-bar{
+        width:16.66666667% !important;
+    }
+    .right-nav-bar{
+        width:83.33333333% !important;
+    }
 }
 @media only screen and (max-width: 740px) {
-    
+    .left-icon-bar{
+        width: 33.33333333%;
+    }
+    .right-nav-bar{
+        width:66.66666667%;
+    }
     .adjust{
         padding:0;
         margin:0;
@@ -141,25 +171,6 @@ body .container-fluid{
     }
     .login_btn {
         margin-right: 5px;
-    }
-}
-
-@media only screen 
-and (min-device-width: 320px) 
-and (max-device-width: 480px)
-and (-webkit-min-device-pixel-ratio: 2) {
-    .width1 {
-        width: 90px;
-    }
-    .width2 {
-        width: 30px;
-    }
-    .forget_container_main .right-pipe {
-        margin: 7px 0px 0 0px;
-    }
-    .btn_query {
-        font-size: 10px;
-        padding: 0px 5px 0px 5px;
     }
 }
 

@@ -3,5 +3,7 @@ $('#nav-bar-icon').on('click', function(){
     $('#cross-icon').addClass('display-block');
     $('.bar').addClass('display_none');
 });
-
+$('#user-option').on('click', function(){
+    $('#user-option i').toggleClass('fa-angle-up');
+});
  

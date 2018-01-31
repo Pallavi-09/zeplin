@@ -75,6 +75,14 @@ body .container-fluid{
 .bar-icon, .display_none{
     display: none !important;
 }
+.display-block{
+    display: block !important;
+}
+.cross-nav-icon{
+    color: #000;
+    font-size: 21px;
+    text-shadow: 0 1px #000;
+}
 .nav-bar-subicon{
     height:79px;
     width: 180px;
@@ -101,14 +109,94 @@ body .container-fluid{
 .bar {
     position: relative;
     transform: translateY(25px);
-    background: black;
+    background: #353535;
     transition: all 0ms 300ms;
-    width: 19px;
+    width: 19px !important;
+    bottom: 24px;
 }
 .bar, .bar:after, .bar:before {
-    width: 30px;
+    width: 27px;
     height: 3px;
+    content: "";
+    display: inline-block;
 }
+.bar:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 7px;
+    background:#353535;
+    transition: bottom 300ms 300ms cubic-bezier(.23,1,.32,1),transform 300ms cubic-bezier(.23,1,.32,1);
+}
+.bar:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 7px;
+    background: #353535;
+    transition: top 300ms 300ms cubic-bezier(.23,1,.32,1),transform 300ms cubic-bezier(.23,1,.32,1);
+}
+.hamburger-menu {
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    cursor: pointer;
+    z-index: 9;
+    display: none;
+}
+
+.dropdown-menu.logo-menu , .alert-icon{
+    top: 51px;
+    left: -16px;
+    border-top: none;
+    border-color: #D7D7D7;
+    border-radius: 0px;
+}
+
+.logo-menu:before, .alert-icon:before {
+    content: "";
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 13px solid #D7D7D7;
+}
+
+.logo-menu:after, .alert-icon:after {
+    content: "";
+    border-left: 9px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 11px solid #fff;
+}
+.logo-menu:before{
+    position: absolute;
+    top: -13px;
+    left: 10%;
+}
+.logo-menu:after{
+    position: absolute;
+    top: -11px;
+    left: calc(10% + 1px);
+}
+.dropdown-menu>li {
+    PADDING: 18px;
+    FONT-SIZE: 16PX;
+}
+.dropdown-menu>li>a{
+    opacity: 0.6;
+}
+.alert-icon li.first-sec{
+    border-bottom: 1px solid #E4E4E4;
+}
+.alert-icon:before {
+    position: absolute;
+    top: -13px;
+    left: 51%;
+}
+.alert-icon:after{
+    position: absolute;
+    top: -11px;
+    left: calc(51% + 1px);
+}
+
 @media only screen and (max-width: 368px)
 {
     .bell-icon-min{

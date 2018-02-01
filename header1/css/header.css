@@ -144,6 +144,26 @@ body .container-fluid{
     z-index: 9;
     display: none;
 }
+.alert-circle{        
+    height: 19px;
+    width: 18px;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%;
+    color:#fff;
+    font-size:12px;
+    background: #f75d00;
+    margin-left: -3px;
+
+}
+.alert-circle label {
+    display: inline;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+/************** Dropdown Manage *****************/
 
 .dropdown-menu.logo-menu , .alert-icon, .user-option-dropdown{
     top: 51px;
@@ -155,7 +175,7 @@ body .container-fluid{
     left: -16px;
 }
 .alert-icon{
-    left: 134px;
+    /***left: 211px;****/
 }
 .logo-menu:before, .alert-icon:before{
     content: "";
@@ -198,7 +218,6 @@ body .container-fluid{
     right: 3%;
 }
 .user-option-dropdown{
-    left: -36%;
     width: 274px;
     padding: 0px;
 }
@@ -241,7 +260,7 @@ body .container-fluid{
 .alert-icon:before {
     position: absolute;
     top: -13px;
-    left: 86%;
+    left: 85.8%;
 }
 .alert-icon:after{
     position: absolute;
@@ -253,13 +272,22 @@ body .container-fluid{
     font-size: 20px;
     color: #00B851;
 }
+.cursor-point{
+    cursor: pointer
+}
+
+/************** Media Query *****************/
+
 @media only screen and (max-width: 368px)
 {
+    
     .bell-icon-min{
-        width: 25% !important;
+        width: 31% !important;
+        padding: 0;
     }
     .login-user{
-        width: 75% !important;
+        width: 69% !important;
+        padding: 0;
     }
 }
 @media only screen and (max-width: 636px) {
@@ -271,6 +299,9 @@ body .container-fluid{
     }
 }
 @media only screen and (max-width: 740px) {
+    .col-xs-12, .col-xs-6{
+        padding:0 2px;
+    }
     .left-icon-bar{
         width: 33.33333333%;
     }

@@ -15,7 +15,6 @@ $('#user-option').on('click', function(){
     currentState = !currentState;
 });
 $('#alert-icon').on('click', function(){
-    
     var x = ($(this).position().left)-244;
     $('.alert-icon').css('left',x);
     if(labelState === true){
@@ -31,3 +30,11 @@ $('#user-option').on('click', function(e){
     var x = ($(this).position().left)+(-233);
     $('.user-option-dropdown').css('left',x);
 });
+
+window.onresize = function() {
+    var x = ($(this).position().left)+(-23);
+    $('.user-option-dropdown').css('left',x);
+
+
+    //call redraw
+}

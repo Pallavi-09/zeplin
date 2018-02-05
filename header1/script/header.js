@@ -34,7 +34,4 @@ $('#user-option').on('click', function(e){
 window.onresize = function() {
     var x = ($(this).position().left)+(-23);
     $('.user-option-dropdown').css('left',x);
-
-
-    //call redraw
 }

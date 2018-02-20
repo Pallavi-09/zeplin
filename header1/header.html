@@ -10,115 +10,81 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body> 
-     <div class="main-wrapper">
-
-        <!--Navigation Bar-->
-        <div class="row forget_container_main password_nav ">
+    <div class="main-wrapper">
+      
+      <!--Navigation Bar-->
+        <div class="container-fluid">
+          <div class="row forget_container_main password_nav ">
             <div class="col-md-6 col-sm-6 col-xs-6 left-icon-bar">
-                <div class="logo-section">
-                    <div class="pull-left">
-                        <a routerLink="../home-page"><img src="assets/images/fp.png" class="width1 fairPrice-icon logo_img" alt="fairPrice.png" /></a>
-                    </div>
-                    <div class="pull-left right-pipe height_comn"></div>
-                    <div>
-                        <a routerLink="../home-page"><img src="assets/images/grab.png" class="width2 grab-icon logo_img2" alt="fairPrice.png" /></a>
-                    </div>
+              <div class="logo-section">
+                <div class="pull-left" >	
+                  <img src="images/fp.png" class="width1 fairPrice-icon logo_img" alt="fairPrice.png"/>
                 </div>
-                <div class="hamburger-menu bar-icon" id="nav-bar-icon" style="display: block;">
-                    <div class="bar dropdown-toggle" data-toggle="dropdown" id="hamburger-menu"></div>
-                    <ul class="dropdown-menu logo-menu" role="menu" aria-labelledby="hamburger-menu">
-                        <li role="presentation">
-                            <a role="menuitem" tabindex="-1" routerLink="q
-                            ../home-page">Home</a>
-                        </li>
-                        <li role="presentation">
-                            <a role="menuitem" tabindex="-1" routerLink="../terms-and-conditions">T&Cs</a>
-                        </li>
-                        <li role="presentation">
-                            <a role="menuitem" tabindex="-1" routerLink="../change-password">Change password</a>
-                        </li>
-                        <li role="presentation">
-                            <a role="menuitem" tabindex="-1" (click)="logOut()">Log out</a>
-                        </li>    
-                        <li role="presentation">    
-                            <a role="menuitem" tabindex="-1" routerLink="../faq">FAQS</a>
-                        </li>
+                <div class="pull-left right-pipe height_comn"></div>
+                <div>
+                  <img src="images/grab.png" class="width2 grab-icon logo_img2" alt="fairPrice.png"/>
+                </div>
+              </div>
+              <div class="hamburger-menu bar-icon" id="nav-bar-icon" style="display: block;">
+                <div class="bar dropdown-toggle"  data-toggle="dropdown" id="hamburger-menu"></div>
+                <ul class="dropdown-menu logo-menu" role="menu" aria-labelledby="hamburger-menu">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Home</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">T&Cs</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">FAQS</a></li>
+                </ul>
+                <div class="ms-lb-hide display_none cross-nav-icon" id="cross-icon">&#10005;</div>
+                
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6 right-nav-bar">
+              <div class="col-md-12 col-sm-12 col-xs-12 pull-right">
+                <div class="col-md-8 col-sm-6 col-xs-6 pull-left text-right bell-icon-min">
+                  <img src="images/alert.png" class="alert_icon dropdown-toggle" data-toggle="dropdown" id="alert-icon" alt="fairPrice.png"/>
+                  <span class="alert-circle pull-right"><label>1</label></span>
+                  <ul class="dropdown-menu alert-icon" role="menu" aria-labelledby="alert-icon">
+                    <li role="presentation" class="first-sec"><a role="menuitem" tabindex="-1" href="#">Your email is not validated</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">You have not made any payment</a></li>
+                  </ul>  
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-6 pull-left login-user cursor-point">
+                  <span class="pull-right dropdown-toggle" data-toggle="dropdown" id="user-option">
+                    <i class="fa fa-angle-down down-icon fa-2x" aria-hidden="true"></i>
+                  </span> 
+                  <ul class="dropdown-menu user-option-dropdown" role="menu" aria-labelledby="user-option">
+                      <li role="presentation" class="dropdown-header">
+                        <div class="dropdown-header-section">
+                          <span>
+                            <a role="menuitem" tabindex="-1" href="#">
+                              Membership status:
+                            </a>
+                          </span>
+                          <span>
+                            <span class="active-circle"></span>
+                            <a href="#">Active</a>
+                          </span>
+                        </div>
+                        <div class="dropdown-header-section">
+                          <a href="#">You are a member since:</a>
+                          <a href="#">15/02/2018</a>
+                        </div>
+                      </li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">My profile</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Payment & membership details</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Change password</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Log out</a></li>                    
                     </ul>
-                    <div class="ms-lb-hide display_none cross-nav-icon" id="cross-icon">&#10005;</div>
-    
+                  <span class="robert_txt pull-right">Robert</span> 
                 </div>
+                
+              </div>
             </div>
-            <!--Right sec-->
-            <div class="col-md-6 col-sm-6 col-xs-6 right-nav-bar" *ngIf="loginStatus">
-                <div class="col-md-12 col-sm-12 col-xs-12 pull-right">
-                    <div class="col-md-8 col-sm-6 col-xs-6 pull-left text-right bell-icon-min" (click)="notificationClick($event.target);">
-                        <img src="assets/images/header/alert.png" class="alert_icon dropdown-toggle" data-toggle="dropdown" id="alert-icon" alt="fairPrice.png"
-                        />
-                        <span *ngIf="notificationCount!=0" class="alert-circle pull-right">
-                            <label>{{notificationCount}}</label>
-                        </span>
-                        <ul *ngIf="notificationCount!=0" class="dropdown-menu alert-icon" role="menu" aria-labelledby="alert-icon">
-                            <li *ngIf="activeStatus=='false'" role="presentation" class="first-sec">
-                                <a role="menuitem" tabindex="-1" routerLink="../user-profile">Your email is not validated</a>
-                            </li>
-                            <li *ngIf="paymentStatus=='true'" role="presentation">
-                                <a role="menuitem" tabindex="-1" routerLink="../make-payment">You have not made any payment</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-6 pull-left login-user">
-                        <span class="pull-right dropdown-toggle" data-toggle="dropdown" id="user-option" (click)="nameClick($event.target);">
-                            <i class="fa fa-angle-down down-icon fa-2x" aria-hidden="true"></i>
-                        </span>
-                        <ul class="dropdown-menu user-option-dropdown" role="menu" aria-labelledby="user-option">
-                            <li role="presentation" class="dropdown-header">
-                                <div class="dropdown-header-section">
-                                <span>
-                                    <a role="menuitem" tabindex="-1" href="#">
-                                    Membership status:
-                                    </a>
-                                </span>
-                                <span>
-                                    <span class="active-circle"></span>
-                                    <a>{{subStatus=='null' ? 'InActive' : subStatus}}</a>
-                                </span>
-                                </div>
-                                <div *ngIf="subStrDate!=='null'" class="dropdown-header-section">
-                                <a>You are a member since:</a>
-                                <a>{{subStrDate}}</a>
-                                </div>
-                            </li>
-                            <li role="presentation">
-                                <a role="menuitem" tabindex="-1" routerLink="../user-profile">My profile</a>
-                            </li>
-                            <li *ngIf="activeStatus=='true' && paymentStatus=='false'" role="presentation">
-                                <a role="menuitem" tabindex="-1" routerLink="../membership-details">Payment & membership details</a>
-                            </li>
-                            <li role="presentation">
-                                <a role="menuitem" tabindex="-1" routerLink="../change-password">Change password</a>
-                            </li>
-                            <li role="presentation">
-                                <a role="menuitem" tabindex="-1" (click)="logOut()">Log out</a>
-                            </li>
-                        </ul>
-                        <span class="robert_txt pull-right">{{userName}}</span>
-                    </div>
-                </div>
-            </div>
-            <!--End Right sec-->
-            <div *ngIf="!loginStatus" class="col-md-6 col-sm-6 col-xs-6 pull-right">
-                <div class="pull-right">
-                    <button *ngIf="!loginStatus" type="button" class=" login_btn btn_query" (click)="goToLogin();">LOGIN</button>
-                    <button *ngIf="!loginStatus" type="button" class="signup_btn active_btn btn_query" (click)="goToSignup();">SIGN UP</button>
-                </div>
-            </div>
+          </div>
         </div>
-    
-    
-        <!--End Navigation Bar-->
-    
+
+
+      <!--End Navigation Bar-->
+
     </div>
-     
   </body>
   <script src="script/jquery.min.js"></script>
   <script src="script/bootstrap.min.js"></script>

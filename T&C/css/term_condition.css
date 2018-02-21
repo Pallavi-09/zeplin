@@ -309,6 +309,9 @@ and (-webkit-min-device-pixel-ratio: 2) {
 .padding_top{
     padding-top: 10px;
 }
+.padding_top_manage{
+    padding-top: 17%;
+}
 .margin_bottom{
     margin-bottom: 10px;
 }
@@ -328,13 +331,19 @@ a:hover,.footer_main_section > div{
 .col-custom-3{
     width:21%;
 }
+@media only screen and (max-width: 1380px) {
+    .footer-right{
+        padding-left:0px;
+        padding-right:0px;        
+    }
+}
 @media only screen and (max-width: 1100px) {
     .right_bar, .right_pipe{
         border:none;
         margin-bottom: 15px;
     }
     .footer_main_section .width3{
-        padding-left: 0%;
+        padding-left: 15px;
     }
     .padding_manage{
         padding-left:4%;
@@ -349,7 +358,6 @@ a:hover,.footer_main_section > div{
         padding:0 !important;
         margin:0 !important;
     }
-    
     .common_height{
         height:88px !important;
     }
@@ -361,5 +369,13 @@ a:hover,.footer_main_section > div{
     }
     .partner_sec{
         margin-bottom: 0px !important;
+    }
+}
+@media only screen and (max-width: 768px){
+    .padding_manage{
+        padding-left:15px;
+    }
+    .padding_top_manage {
+        padding-top: 25px;   
     }
 }

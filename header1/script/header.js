@@ -17,13 +17,37 @@ $('#user-option').on('click', function(){
 $('#alert-icon').on('click', function(){
     var x = ($(this).position().left)-244;
     $('.alert-icon').css('left',x);
+    var x1 = window.matchMedia("(max-width: 496px) and (min-width: 371px) ");
+    var x2 = window.matchMedia("(max-width: 370px)");
+    var x3 = window.matchMedia("(max-width: 740px) and (min-width: 496px)");
+
+    if (x1.matches) {
+        var x = ($('#alert-icon').position().left)-178;
+        $(".notification-manage").css('left','70%');
+        $('.alert-icon').css('left',x);
+       
+    } 
+    if (x2.matches) {
+        var x = ($('#alert-icon').position().left)-100;
+        $('.alert-icon').css('left',x);
+        $(".notification-manage").css('left','47%');
+       
+    }
+    if(x3.matches) {
+        $(".notification-manage").css('left','81%');
+    }
+});
+
+$('#notification-block').on('click', function(){
+    console.log('enter');
+    $('.notification-manage').toggleClass('hide');
     if(labelState === true){
-        $(this).attr('src','images/active_notification.png');
+         $('#alert-icon').attr('src','images/active_notification.png');
     }
     else{
-        $(this).attr('src','images/alert.png');
+         $('#alert-icon').attr('src','images/alert.png');
     }
-    labelState = !labelState;
+   labelState = !labelState;
 });
 
 $('#user-option').on('click', function(e){
@@ -31,7 +55,4 @@ $('#user-option').on('click', function(e){
     $('.user-option-dropdown').css('left',x);
 });
 
-window.onresize = function() {
-    var x = ($(this).position().left)+(-23);
-    $('.user-option-dropdown').css('left',x);
-}
+

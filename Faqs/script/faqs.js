@@ -10,6 +10,7 @@ $('.cross_icon span').click(function(){
     $('#faq-left-nav-bar').removeClass('left-nav-toggle');
     $('#toggle-bar').removeClass('display_none');
     $('#faq-left-nav-bar').addClass('display_none');
+    $('#cross-nav').addClass('hide');
 });
 
 $('.panelToggleSec').on('click', function(){

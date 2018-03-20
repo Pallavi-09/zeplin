@@ -9,7 +9,7 @@ export class MessageService {
     constructor ( private http:HttpClient){ //Intialize the http   
     }
     
-    public getJSON():Observable<any>{
+    public getJSON():any{
         return this.http.get("./assets/employee.json");
     }    
 }

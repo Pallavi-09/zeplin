@@ -8,6 +8,7 @@ import { HeroFormComponent } from './hero-form/hero-form.component';
 import { CarComponent } from './car/car.component';
 import { MessageService } from './car/employee.service';
 import { HttpClientModule } from '@angular/common/http';
+import { Ng2SearchPipeModule } from 'ng2-search-filter'; 
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    Ng2SearchPipeModule
   ],
   providers: [MessageService],
   bootstrap: [AppComponent]

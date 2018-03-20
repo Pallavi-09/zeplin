@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MessageService } from './employee.service'
+import { MessageService } from './employee.service';
 
 @Component({
   selector: 'app-car',
@@ -9,6 +9,7 @@ import { MessageService } from './employee.service'
 })
 export class CarComponent implements OnInit {
   private emp_data = [];
+  private name:string = "";
   constructor( private _msgService : MessageService ) { }
 
   ngOnInit() {
@@ -16,4 +17,5 @@ export class CarComponent implements OnInit {
       this.emp_data = data.emp;
     });
   }
+
 }

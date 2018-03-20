@@ -3,7 +3,7 @@
   <br>
   <br>
   <div style="position:relative;left:45%;">
-    <input type="text"  class="text-center" id="search" placeholder="Search"/>
+    <input type="text"  class="text-center" id="search" placeholder="Search By Name" [(ngModel)]="name"/>
   </div>
   <br>
   <br>
@@ -23,7 +23,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr  *ngFor = "let e of this.emp_data">
+        <tr  *ngFor = "let e of this.emp_data | filter:name">
           <td>{{e.EID}}</td>
           <td>{{e.NAME}}</td>
           <td>{{e.SURNAME}}</td>

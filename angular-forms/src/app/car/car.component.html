@@ -1,0 +1,40 @@
+<div>
+  <H1 class="text-center" style="color:purple;">EMPLOYEE TABLE</H1>
+  <br>
+  <br>
+  <div style="position:relative;left:45%;">
+    <input type="text"  class="text-center" id="search" placeholder="Search"/>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th> EID </th>
+          <th> NAME </th>
+          <th> SURNAME </th>
+          <th> GENDER </th>
+          <th> STATE </th>  
+          <th> HIREDATE </th>        
+          <th> DEPT </th>        
+          <th> SALARY </th>                
+        </tr>
+      </thead>
+      <tbody>
+        <tr  *ngFor = "let e of this.emp_data">
+          <td>{{e.EID}}</td>
+          <td>{{e.NAME}}</td>
+          <td>{{e.SURNAME}}</td>
+          <td>{{e.GENDER}}</td>
+          <td>{{e.STATE}}</td>
+          <td>{{e.HIREDATE}}</td>
+          <td>{{e.DEPT}}</td>
+          <td>{{e.SALARY}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+</div>

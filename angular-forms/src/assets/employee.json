@@ -1,0 +1,8 @@
+{ "emp": [ 
+        {"EID":1, "NAME":"Rebecca" ,"SURNAME" : "Moore", "GENDER":"F","STATE":"CALIFORNIA","HIREDATE":"2005-03-11","DEPT":"R&D","SALARY":7000},
+        {"EID":2, "NAME":"Ashley" ,"SURNAME" : "Wilson", "GENDER":"F","STATE":"NEWYORK","HIREDATE":"2005-10-11","DEPT":"FINANCE","SALARY":70000},   
+        {"EID":3, "NAME":"Emily" ,"SURNAME" : "Johnson", "GENDER":"F","STATE":"TEXAS","HIREDATE":"2005-28-11","DEPT":"HR","SALARY":20000},   
+        {"EID":4, "NAME":"Mark" ,"SURNAME" : "Smith", "GENDER":"F","STATE":"CALIFORNIA","HIREDATE":"2006-01-11","DEPT":"SALES","SALARY":135000},   
+        {"EID":5, "NAME":"Pete" ,"SURNAME" : "Smith", "GENDER":"F","STATE":"NEWYORK","HIREDATE":"2010-25-11","DEPT":"IT","SALARY":983200}        
+    ] 
+}

@@ -7,8 +7,8 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { FormsModule } from '@angular/forms';
 import { HeroDetailsComponentComponent } from './hero-details-component/hero-details-component.component';
 import { HeroService } from './hero.service';
-import { MessageServiceService } from './message-service.service';
 import { MessagesComponent } from './messages/messages.component';
+import { MessageService } from './message.service';
 
 
 @NgModule({
@@ -22,7 +22,7 @@ import { MessagesComponent } from './messages/messages.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [HeroService, MessageServiceService],
+  providers: [HeroService, MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

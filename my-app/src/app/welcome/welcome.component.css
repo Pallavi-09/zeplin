@@ -1,0 +1,9 @@
+.text_form{
+    margin: 0 auto;
+    color: purple;
+    font-family: cursive;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    font-size: 65px;
+}

@@ -1,0 +1,59 @@
+<div class = "panel panel-primary">
+    <div class = "panel-heading">
+       <h3 class = "panel-title">{{nameProp}}</h3>
+    </div>
+    
+    <div class = "panel-body">
+      <div class="row">
+        <div class="col-md-2">
+            Filter by:
+        </div>
+        <div class="col-md-4">
+            <input type="text" placeholder="Enter Product"/>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-md-6">
+            <h3>Filtered By:</h3>
+          </div>
+      </div>
+      <div class="row table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                  <th>
+                    <button type="button" class="btn btn-primary">Show Image</button>
+                  </th>
+                  <th>
+                    Product
+                  </th>
+                  <th>
+                    Code
+                  </th>
+                  <th>
+                    Available
+                  </th>
+                  <th>
+                    Price
+                  </th>
+                  <th>
+                    5 Star Rating
+                  </th>
+                </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of product">
+                  <td>
+                    <img [src]='product.Show_Image' [title]='product.Product' />
+                  </td>
+                  <td>{{item.Product}}</td>
+                  <td>{{item.code}}</td>
+                  <td>{{item.Available}}</td>
+                  <td>{{item.Price}}</td>
+                  <td>{{item.Star_Rating}}</td>
+              </tr>
+            </tbody>
+        </table>
+      </div>
+    </div>
+ </div>

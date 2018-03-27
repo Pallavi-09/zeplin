@@ -1,20 +1,20 @@
-<div class = "panel panel-primary">
-    <div class = "panel-heading">
-       <h3 class = "panel-title">{{nameProp}}</h3>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+       <h3 class="panel-title">{{nameProp}}</h3>
     </div>
     
-    <div class = "panel-body">
+    <div class="panel-body">
       <div class="row">
         <div class="col-md-2">
             Filter by:
         </div>
         <div class="col-md-4">
-            <input type="text" placeholder="Enter Product"/>
+            <input type="text" placeholder="Enter Product" [(ngModel)]="filter_txt"/>
         </div>
       </div>
       <div class="row">
           <div class="col-md-6">
-            <h3>Filtered By:</h3>
+            <h3>Filtered By: {{filter_txt}}</h3>
           </div>
       </div>
       <div class="row table-responsive">
@@ -22,7 +22,7 @@
             <thead>
                 <tr>
                   <th>
-                    <button type="button" class="btn btn-primary">Show Image</button>
+                    <button type="button" class="btn btn-primary" (click)="showImageToggle($event)">{{toggleImg ? "Show Image" : "Hide Image"}}</button>
                   </th>
                   <th>
                     Product
@@ -44,12 +44,12 @@
             <tbody>
               <tr *ngFor="let item of product">
                   <td>
-                    <img [src]='product.Show_Image' [title]='product.Product' />
+                    <img [src]='item.ImageUrl'  [title]='product.Product' [style.width.px]=64 [style.margin-left.px]=25 *ngIf = "!toggleImg">
                   </td>
-                  <td>{{item.Product}}</td>
-                  <td>{{item.code}}</td>
+                  <td>{{item.Product | uppercase}}</td>
+                  <td>{{item.code | convertSpace:' '}}</td>
                   <td>{{item.Available}}</td>
-                  <td>{{item.Price}}</td>
+                  <td>{{item.Price | currency:'USD':true:'1.2-2'}}</td>
                   <td>{{item.Star_Rating}}</td>
               </tr>
             </tbody>

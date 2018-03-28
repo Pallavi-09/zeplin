@@ -8,7 +8,10 @@ import { IProduct } from './product';
 })
 export class ProductComponent implements OnInit {
 
-  constructor() { }
+  fliteredProducts:IProduct[];
+  constructor() { 
+    this.fliteredProducts = this.product;
+  }
 
   ngOnInit() {
   }
@@ -22,9 +25,9 @@ export class ProductComponent implements OnInit {
   }
   set listFilter(value:string){
     this.filter_txt = value;
+    this.fliteredProducts = this.listFilter ? this.performFilter(this.listFilter) : this.product;
   }
 
-  fliteredProducts:IProduct[];
 
   product : IProduct[] = [
     {"ImageUrl":"./././assets/images/Machovka-Hammer-2.png" , "Product":"Hamburger", "code":"GDC 110", "Available":"Mar 19 2017", "Price":19.333,"Star_Rating": 2.2},
@@ -33,5 +36,11 @@ export class ProductComponent implements OnInit {
 
   showImageToggle(e):void{
     this.toggleImg = !this.toggleImg;
+  }
+
+  performFilter(filterBy:string): IProduct[] {
+    filterBy = filterBy.toLocaleUpperCase();
+    return this.product.filter( (product:IProduct) => 
+        product.Product.toLocaleUpperCase().indexOf(filterBy) !== -1);
   }
 }

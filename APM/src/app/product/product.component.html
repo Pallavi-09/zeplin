@@ -42,7 +42,7 @@
                 </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let item of product">
+              <tr *ngFor="let item of fliteredProducts">
                   <td>
                     <img [src]='item.ImageUrl'  [title]='product.Product' [style.width.px]=64 [style.margin-left.px]=25 *ngIf = "!toggleImg">
                   </td>
@@ -50,7 +50,7 @@
                   <td>{{item.code | convertSpace:' '}}</td>
                   <td>{{item.Available}}</td>
                   <td>{{item.Price | currency:'USD':true:'1.2-2'}}</td>
-                  <td>{{item.Star_Rating}}</td>
+                  <td><app-star [rating] = 'item.Star_Rating'></app-star></td>
               </tr>
             </tbody>
         </table>

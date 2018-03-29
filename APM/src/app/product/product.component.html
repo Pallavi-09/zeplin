@@ -1,6 +1,6 @@
 <div class="panel panel-primary">
     <div class="panel-heading">
-       <h3 class="panel-title">{{nameProp}}</h3>
+       <h3 class="panel-title">{{nameProp}} </h3>
     </div>
     
     <div class="panel-body">
@@ -50,7 +50,7 @@
                   <td>{{item.code | convertSpace:' '}}</td>
                   <td>{{item.Available}}</td>
                   <td>{{item.Price | currency:'USD':true:'1.2-2'}}</td>
-                  <td><app-star [rating] = 'item.Star_Rating'></app-star></td>
+                  <td><app-star [rating] = 'item.Star_Rating' (notify)="eventListen($event)"></app-star></td>
               </tr>
             </tbody>
         </table>

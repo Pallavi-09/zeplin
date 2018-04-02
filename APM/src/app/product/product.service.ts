@@ -7,7 +7,7 @@ import 'rxjs/add/operator/catch';
 
 @Injectable()
 export class productService {
-    private _productUrl = '';
+    private _productUrl = "././assets/api/data.json";
     constructor( private _http : HttpClient){
 
     }

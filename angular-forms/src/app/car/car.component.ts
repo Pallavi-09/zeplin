@@ -9,13 +9,14 @@ import { MessageService } from './employee.service';
 })
 export class CarComponent implements OnInit {
   private emp_data = [];
+  errorMsg:string;
   private name:string = "";
   constructor( private _msgService : MessageService ) { }
 
   ngOnInit() {
-    this._msgService.getJSON().subscribe(data => {
-      this.emp_data = data.emp;
-    });
+    this._msgService.getEmp()
+      .subscribe(emp_data => this.emp_data = emp_data,
+      error=> this.errorMsg = <any>error)
   }
 
 }

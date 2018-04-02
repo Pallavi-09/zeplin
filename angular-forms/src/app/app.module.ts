@@ -8,14 +8,16 @@ import { HeroFormComponent } from './hero-form/hero-form.component';
 import { CarComponent } from './car/car.component';
 import { MessageService } from './car/employee.service';
 import { HttpClientModule } from '@angular/common/http';
-import { Ng2SearchPipeModule } from 'ng2-search-filter'; 
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { ProductDetailComponent } from './product/product-detail/product-detail.component'; 
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroFormComponent,
-    CarComponent
+    CarComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,

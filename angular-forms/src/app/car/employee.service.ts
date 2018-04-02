@@ -1,15 +1,24 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse} from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/do';
+import 'rxjs/add/operator/catch';
+
 
 @Injectable()
 export class MessageService {
 
+    private empUrl = "./assets/employee.json";
     
-    constructor ( private http:HttpClient){ //Intialize the http   
+    constructor(private _http :HttpClient){}
+
+    getEmp():Observable<any[]>{
+        return this._http.get<any[]>(this.empUrl)
+               .do(data => console.log(data))
+               .catch(this.handleErr);
     }
-    
-    public getJSON():any{
-        return this.http.get("./assets/employee.json");
-    }    
+
+    handleErr(err: HttpErrorResponse){
+        return Observable.throw(err.message);
+    }
 }

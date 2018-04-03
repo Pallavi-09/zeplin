@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProductDetailComponent } from './product/product-detail/product-detail.component';
 import { WelcomeComponent } from './home/welcome/welcome.component';
 import { RoutingModule } from './routing/routing.module';
+import { ProductGuardService } from './product/product-guard.service';
 
 
 
@@ -29,7 +30,7 @@ import { RoutingModule } from './routing/routing.module';
     HttpClientModule,
     RoutingModule
   ],
-  providers: [],
+  providers: [ProductGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

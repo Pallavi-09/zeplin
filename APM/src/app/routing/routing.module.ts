@@ -1,15 +1,14 @@
-import { NgModule } from '@angular/core';
+import { NgModule,OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductComponent } from '../product/product.component';
 import { ProductDetailComponent } from '../product/product-detail/product-detail.component';
 import { RouterModule,Routes} from '@angular/router';
+import { ProductGuardService } from '../product/product-guard.service'
 import { WelcomeComponent } from '../home/welcome/welcome.component';
-
-
 
 const routes: Routes = [
   {path:'product', component: ProductComponent},
-  {path:'product/:id', component: ProductDetailComponent},
+  {path:'product/:id',canActivate:[ProductGuardService], component: ProductDetailComponent},
   {path:'welcome', component:WelcomeComponent },
   {path:'', redirectTo: 'welcome', pathMatch:'full' }
 ];
@@ -20,4 +19,9 @@ const routes: Routes = [
   declarations: []
 })
 
-export class RoutingModule { }
+export class RoutingModule { 
+  ngOnInit(){
+      
+    }
+
+}

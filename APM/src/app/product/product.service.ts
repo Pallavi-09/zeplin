@@ -14,12 +14,12 @@ export class productService {
 
     getProducts():Observable<IProduct[]>{
         return  this._http.get<IProduct[]>(this._productUrl)
-            .do(data => console.log(JSON.stringify(data)))
+            //.do(data => console.log(JSON.stringify(data)))
             .catch(this.handleError);
     }
 
     private handleError(err: HttpErrorResponse){
-            console.log(' catchhandler');
+           // console.log(' catchhandler');
             return Observable.throw(err.message);
     }
 

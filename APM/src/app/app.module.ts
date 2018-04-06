@@ -12,8 +12,6 @@ import { WelcomeComponent } from './home/welcome/welcome.component';
 import { RoutingModule } from './routing/routing.module';
 import { ProductGuardService } from './product/product-guard.service';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,

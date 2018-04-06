@@ -9,7 +9,7 @@
             Filter by:
         </div>
         <div class="col-md-4">
-            <input type="text" placeholder="Enter Product" [(ngModel)]="filter_txt"/>
+            <input type="text" placeholder="Enter Product" (input)="transform(productItem.value)" #productItem [(ngModel)]="filter_txt"/>
         </div>
       </div>
       <div class="row">

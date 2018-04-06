@@ -4,6 +4,7 @@ import { ActivatedRoute,Router} from '@angular/router';
 import { productService } from '../product.service';
 
 @Component({
+  selector: 'app-product-detail',
   templateUrl: './product-detail.component.html',
   styleUrls: ['./product-detail.component.css']
 })
@@ -31,7 +32,7 @@ export class ProductDetailComponent implements OnInit {
   }
 
   getProduct(id: number) {
-    this._productService.getProducts(id).subscribe(
+   this._productService.getProduct(id).subscribe(
       product => this.product = product,
       error => this.errorMessage = <any>error);
   }

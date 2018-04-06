@@ -48,6 +48,19 @@ export class ProductComponent implements OnInit {
         product.Product.toLocaleUpperCase().indexOf(filterBy) !== -1);
   }
 
+  assignCopy(){
+    this.fliteredProducts = Object.assign([], this.product);
+ }
+
+  transform(value: any, input: string) {
+    if(!value) this.assignCopy(); //when nothing has typed
+    this.fliteredProducts = Object.assign([], this.product).filter(
+      product => product.Product.toLowerCase().indexOf(value.toLowerCase()) > -1
+    )
+    this.assignCopy();
+  }
+
+  
   eventListen(mesg):void{
       this.nameProp = "Product List :: "+mesg + "Rating is Clicked ! ";
   }

@@ -1,1 +1,46 @@
-<app-car></app-car>
+<div class="container">
+    <h3>Angular Forms</h3>
+    <form #form = "ngForm">
+        <div class="form-group">
+            <label for="firstnameId">First Name</label>
+            <input type="text"  placeholder="Enter Name" required class="form-control" id="firstnameId" name="name" ngModel>
+        </div>
+        <div class="form-group">
+            <label for="lastnameId">Last Name</label>
+            <input type="text"  placeholder="Enter Name" required class="form-control" id="lastnameId" name="name" ngModel>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" name="full-time-emp" id="full-time-emp">
+                Full Time Employee
+            </label>
+        </div>
+        <label>Payment type</label>
+        <div class="radio">
+            <label>
+                <input type="radio" name="payType" id="w2" checked>
+                W2
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="payType" id="1099">
+                1099
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label>Languages</label>
+            <select class="form-control">
+                <option *ngFor="let lang of languages">
+                    {{lang}}
+                </option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>        
+        
+    </form>
+
+    {{form.pristine}}
+</div>
+    

@@ -13,10 +13,11 @@ export class ProductComponent implements OnInit {
   fliteredProducts:IProduct[];  
   nameProp:string = "Product List";
   toggleImg:boolean = false;
-  filter_txt:string = "";
   product:IProduct[];
   errorMsg:string ;
 
+  _listFilter:string = "";
+  
   constructor( private _productService : productService) { 
 
   }
@@ -31,12 +32,12 @@ export class ProductComponent implements OnInit {
     
   }
   
-  get listFilter():string{
-    return this.filter_txt;
+  get filter_txt():string{
+    return this._listFilter;
   }
-  set listFilter(value:string){
-    this.filter_txt = value;
-    this.fliteredProducts = this.listFilter ? this.performFilter(this.listFilter) : this.product;
+  set filter_txt(value:string){
+    this._listFilter = value; 
+    this.fliteredProducts = this._listFilter ? this.performFilter(this._listFilter) : this.product;
   }
   showImageToggle(e):void{
     this.toggleImg = !this.toggleImg;

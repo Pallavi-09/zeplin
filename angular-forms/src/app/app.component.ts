@@ -15,7 +15,8 @@ export class AppComponent {
   // employee(firstname,lastname){
   //     return "FirstName->"+firstname+" Lastname->" + lastname;
   // }
-  model = new Employee('', 'Singh', true, '1099','German');
+  model = new Employee('', 'Singh', true, '1099','default');
+  hasLangSelected:boolean=false;
   // onChangeModel(e){
   //   if(e.length > 0 ){
   //     this.model.firstname = e.charAt(0).toUpperCase()+e.slice(1);
@@ -25,4 +26,14 @@ export class AppComponent {
   //     this.model.firstname = e;
   //   }
   // }
+
+  checkingSelection(value){
+    if (value === 'default'){
+      this.hasLangSelected = true;
+    }
+    else{
+      console.log(2);      
+      this.hasLangSelected = false;
+    }
+  }
 }

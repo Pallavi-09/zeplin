@@ -9,4 +9,4 @@ export interface IEmployee{
 
 export class Employee implements IEmployee{
    constructor(public firstname:string, public lastname:string, public fullcheck:boolean, public paymentType:string, public lang:string) {}
-} 
+}

@@ -1,3 +1,58 @@
-<p>
-  employee-detail works!
-</p>
+<div class="container-fluid manage">
+  <table class="table table-striped">
+    <thead>
+        <th>
+          EID
+        </th>
+        <th>
+          NAME
+        </th>
+        <th>
+          SURNAME
+        </th>
+        <th>
+          GENDER
+        </th>
+        <th>
+          STATE
+        </th>
+        <th>
+          HIREDATE
+        </th>
+        <th>
+          DEPT
+        </th>
+        <th>
+          SALARY
+        </th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of emp">
+            <td>
+              {{item.EID}}
+            </td>
+            <td>
+              {{item.NAME}}
+            </td>
+            <td>
+              {{item.SURNAME}}
+            </td>
+            <td>
+              {{item.GENDER}}
+            </td>
+            <td>
+              {{item.STATE}}
+            </td>
+            <td>
+              {{item.HIREDATE}}
+            </td>
+            <td>
+              {{item.DEPT}}
+            </td>
+            <td>
+              {{item.SALARY}}
+            </td>
+        </tr>
+    </tbody>
+  </table>
+</div>

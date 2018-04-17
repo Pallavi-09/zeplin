@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Employee } from '../employee.model';
 
 @Component({
   selector: 'app-forms-data',
@@ -11,5 +12,7 @@ export class FormsDataComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  model = new Employee('', 'Singh', true, '1099','default');
 
 }

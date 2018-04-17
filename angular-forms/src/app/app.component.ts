@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Employee } from './employee.model';
+
 
 @Component({
   selector: 'app-root',
@@ -8,24 +8,10 @@ import { Employee } from './employee.model';
 })
 export class AppComponent {
   title = 'app';
+  constructor(){}
   languages:any[] = ["Hindi","English","Spanish","German"];
 
-  // constructor( public firstname:string, public lastname:string){}
-
-  // employee(firstname,lastname){
-  //     return "FirstName->"+firstname+" Lastname->" + lastname;
-  // }
-  model = new Employee('', 'Singh', true, '1099','default');
   hasLangSelected:boolean=false;
-  // onChangeModel(e){
-  //   if(e.length > 0 ){
-  //     this.model.firstname = e.charAt(0).toUpperCase()+e.slice(1);
-  //     console.log(e);
-  //   }
-  //   else{
-  //     this.model.firstname = e;
-  //   }
-  // }
 
   checkingSelection(value){
     if (value === 'default'){

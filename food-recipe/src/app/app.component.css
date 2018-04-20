@@ -1,0 +1,13 @@
+.newValue li{
+    cursor: pointer;
+}
+.newValue li.selected{
+    background-color: red;
+    color:#fff;
+}
+.delete-btn{
+    height: 20px;
+    width: 75px;
+    font-size: 12px;
+    padding: 0;
+}

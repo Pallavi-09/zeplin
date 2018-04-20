@@ -1,4 +1,33 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<h3>
-  Pallavi
-</h3>
+<div class="container-fluid">
+    <div class="form-group">
+      <label>Enter Value:</label>
+      <input type="text" placeholder="Enter Value"  #val [(ngModel)]='name'/>
+      <label *ngIf="updateCheck" class="delete-btn btn btn-success" (click)="updateAry()">Ok</label>
+    </div>
+    <ul class="newValue">
+      <li *ngFor = "let item of listAry; let i = index" >
+          {{item}}
+        <span class="delete-btn btn btn-danger" (click)="onDeleteEvent($event.target)">Delete</span >
+        <span class="delete-btn  btn btn-primary" (click)="onUpdate($event.target)">Update</span>    
+      </li>
+    </ul>
+    <div>
+      <div class="btn btn-success" (click)="onkeyupEvent(val.value)">Add</div>
+    </div>
+
+    <br/>
+    <br/>
+    <br/>
+
+
+    <!-- <div class="animation">
+      <div class="ani1">
+          Pallavi Singh
+      </div>
+      <div class="ani2">
+        Infogain Consultant
+      </div>
+     
+    </div> -->
+</div>

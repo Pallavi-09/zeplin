@@ -7,6 +7,8 @@ import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { RoutingModule } from './routing/routing.module';
 import { UserserviceService } from './service/userservice.service';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { UserserviceService } from './service/userservice.service';
   ],
   imports: [
     BrowserModule,
-    RoutingModule
+    RoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [UserserviceService],
   bootstrap: [AppComponent]

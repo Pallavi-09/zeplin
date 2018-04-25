@@ -8,8 +8,9 @@ import { RegistrationComponent } from './registration/registration.component';
 import { RoutingModule } from './routing/routing.module';
 import { UserserviceService } from './service/userservice.service';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
-
-
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
+import { JsonserviceService } from './jsonservice.service';
 
 @NgModule({
   declarations: [
@@ -21,9 +22,11 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     RoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    HttpModule
   ],
-  providers: [UserserviceService],
+  providers: [UserserviceService,JsonserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

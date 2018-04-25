@@ -1,6 +1,6 @@
 <div class="col-md-12 col-sm-12 col-xs-12">
   <div class="mng_position">
-    <form [formGroup]="loginForm">
+    <form [formGroup]="loginForm" (ngSubmit)="loginFormSubmit(loginForm.value)">
         <h2>LOGIN</h2>
         <div class="form-group">
             <label>username</label>
@@ -10,7 +10,7 @@
           <label>password</label>
           <input type="password" class="form-control" id="password" name="password" formControlName="password"/>
         </div>
-        <button type="submit" class="btn btn-primary" (click)="loginFormSubmit()">Submit</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
         <button type="button" routerLink="/register" class="btn btn-default">Register</button>
       
       </form>

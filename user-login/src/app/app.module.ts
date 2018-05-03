@@ -11,12 +11,16 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import { JsonserviceService } from './jsonservice.service';
+import { ChildComponentComponent } from './child-component/child-component.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    ChildComponentComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
